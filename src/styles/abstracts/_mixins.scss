@@ -1,0 +1,47 @@
+@mixin breakpoint($point) {
+  @if $point == laptop {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == phablet {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+}
+
+@mixin fontSize($fontSize, $fontWeight, $lineHeight, $color) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  color: $color;
+}
+
+@mixin flexBox($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin box($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin defaultSize($color) {
+  @include fontSize(16px, 500, 24px, $color);
+}
+
+@mixin imgBox($width, $height, $objectFit) {
+  width: $width;
+  height: $height;
+  object-fit: $objectFit;
+}

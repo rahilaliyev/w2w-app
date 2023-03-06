@@ -1,8 +1,5 @@
-
 const HomePage = () => {
-  return (
-    <div>LOGIN OLDUN QAQAW</div>
-  )
-}
+  return <div>LOGIN OLDUNUZ</div>;
+};
 
-export default HomePage
+export default HomePage;

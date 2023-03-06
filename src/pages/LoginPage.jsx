@@ -15,10 +15,10 @@ const LoginPage = () => {
       <form onSubmit={loginUser}>
         <h1>Login</h1>
         <div className="tabs">
-          <button onClick={() => setSelectTab("email")} className={selectTab === "email" && "active"}>
+          <button onClick={() => setSelectTab("email")} className={selectTab === "email" ? "active" : ""}>
             Email
           </button>
-          <button onClick={() => setSelectTab("phone")} className={selectTab === "phone" && "active"}>
+          <button onClick={() => setSelectTab("phone")} className={selectTab === "phone" ? "active" : ""}>
             Phone number
           </button>
         </div>
